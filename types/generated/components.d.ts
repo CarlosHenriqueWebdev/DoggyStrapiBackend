@@ -110,9 +110,9 @@ export interface HomeTestimonialsHomeTestimonials extends Schema.Component {
   attributes: {
     Title: Attribute.String & Attribute.Required;
     Description: Attribute.Blocks & Attribute.Required;
-    TestimonialVideoFormats: Attribute.Component<'testimonial-video.testimonial-video'> &
-      Attribute.Required;
-    VideoThumbnail: Attribute.Component<'video-thumbnail.video-thumbnail'>;
+    Image: Attribute.Media & Attribute.Required;
+    ImageAlternativeTextForAccesibility: Attribute.String;
+    GlassOverlayTransparency: Attribute.Integer & Attribute.Required;
   };
 }
 

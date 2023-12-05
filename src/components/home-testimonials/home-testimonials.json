@@ -14,18 +14,20 @@
       "type": "blocks",
       "required": true
     },
-    "TestimonialVideoFormats": {
-      "displayName": "TestimonialVideo",
-      "type": "component",
-      "repeatable": false,
-      "component": "testimonial-video.testimonial-video",
-      "required": true
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
-    "VideoThumbnail": {
-      "displayName": "VideoThumbnail",
-      "type": "component",
-      "repeatable": false,
-      "component": "video-thumbnail.video-thumbnail"
+    "ImageAlternativeTextForAccesibility": {
+      "type": "string"
+    },
+    "GlassOverlayTransparency": {
+      "type": "integer",
+      "required": true
     }
   }
 }
