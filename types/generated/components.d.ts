@@ -1,5 +1,18 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface AboutHeroAboutHero extends Schema.Component {
+  collectionName: 'components_about_hero_about_heroes';
+  info: {
+    displayName: 'AboutHero';
+  };
+  attributes: {
+    BackgroundImage: Attribute.Media & Attribute.Required;
+    BackgroundPosition: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'center'>;
+  };
+}
+
 export interface BookNowCallToActionBookNowCallToAction
   extends Schema.Component {
   collectionName: 'components_book_now_call_to_action_book_now_call_to_actions';
@@ -132,6 +145,17 @@ export interface HomepageVideosHeroSectionHeroSectionVideoFormats
   };
 }
 
+export interface IntroductionIntroduction extends Schema.Component {
+  collectionName: 'components_introduction_introductions';
+  info: {
+    displayName: 'Introduction';
+  };
+  attributes: {
+    Title: Attribute.String & Attribute.Required;
+    Description: Attribute.Blocks & Attribute.Required;
+  };
+}
+
 export interface JoinUsJoinUs extends Schema.Component {
   collectionName: 'components_join_us_joinuses';
   info: {
@@ -208,6 +232,17 @@ export interface NumberCounterRepeatableCategoryNumberCounterRepetableGroup
   };
 }
 
+export interface OurHistoryOurHistory extends Schema.Component {
+  collectionName: 'components_our_history_our_histories';
+  info: {
+    displayName: 'OurHistory';
+  };
+  attributes: {
+    Title: Attribute.String & Attribute.Required;
+    Description: Attribute.Blocks & Attribute.Required;
+  };
+}
+
 export interface QuestionsAndAnswersQuestionsAndAnswers
   extends Schema.Component {
   collectionName: 'components_questions_and_answers_questions_and_answers';
@@ -230,6 +265,20 @@ export interface QuoteDividerQuoteDivider extends Schema.Component {
     Quote: Attribute.String & Attribute.Required;
     BackgroundImage: Attribute.Media & Attribute.Required;
     GlassOverlayTransparency: Attribute.Integer & Attribute.Required;
+  };
+}
+
+export interface RepeatableFieldsRepeatableFields extends Schema.Component {
+  collectionName: 'components_repeatable_fields_repeatable_fields';
+  info: {
+    displayName: 'RepeatableFields';
+    description: '';
+  };
+  attributes: {
+    Title: Attribute.String & Attribute.Required;
+    Description: Attribute.Blocks & Attribute.Required;
+    Image: Attribute.Media & Attribute.Required;
+    ImageAlternativeTextForAccesibility: Attribute.String & Attribute.Required;
   };
 }
 
@@ -328,9 +377,24 @@ export interface VideoThumbnailVideoThumbnail extends Schema.Component {
   };
 }
 
+export interface YourHistoryYourHistory extends Schema.Component {
+  collectionName: 'components_your_history_your_histories';
+  info: {
+    displayName: 'YourHistory';
+  };
+  attributes: {
+    RepeatableFields: Attribute.Component<
+      'repeatable-fields.repeatable-fields',
+      true
+    > &
+      Attribute.Required;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'about-hero.about-hero': AboutHeroAboutHero;
       'book-now-call-to-action.book-now-call-to-action': BookNowCallToActionBookNowCallToAction;
       'call-to-action-button.call-to-action-button': CallToActionButtonCallToActionButton;
       'daycare-features.features-repetable': DaycareFeaturesFeaturesRepetable;
@@ -340,13 +404,16 @@ declare module '@strapi/types' {
       'frequently-asked-questions.frequently-asked-questions': FrequentlyAskedQuestionsFrequentlyAskedQuestions;
       'home-testimonials.home-testimonials': HomeTestimonialsHomeTestimonials;
       'homepage-videos-hero-section.hero-section-video-formats': HomepageVideosHeroSectionHeroSectionVideoFormats;
+      'introduction.introduction': IntroductionIntroduction;
       'join-us.join-us': JoinUsJoinUs;
       'long-text-homepage.long-text-homepage': LongTextHomepageLongTextHomepage;
       'media-collections-homepage.homepage-media-content': MediaCollectionsHomepageHomepageMediaContent;
       'number-counter-category.number-counter-component': NumberCounterCategoryNumberCounterComponent;
       'number-counter-repeatable-category.number-counter-repetable-group': NumberCounterRepeatableCategoryNumberCounterRepetableGroup;
+      'our-history.our-history': OurHistoryOurHistory;
       'questions-and-answers.questions-and-answers': QuestionsAndAnswersQuestionsAndAnswers;
       'quote-divider.quote-divider': QuoteDividerQuoteDivider;
+      'repeatable-fields.repeatable-fields': RepeatableFieldsRepeatableFields;
       'second-text-group.second-text-group': SecondTextGroupSecondTextGroup;
       'services-section.services-section': ServicesSectionServicesSection;
       'services.services': ServicesServices;
@@ -354,6 +421,7 @@ declare module '@strapi/types' {
       'testimonial-video.testimonial-video': TestimonialVideoTestimonialVideo;
       'third-text-group.third-text-group': ThirdTextGroupThirdTextGroup;
       'video-thumbnail.video-thumbnail': VideoThumbnailVideoThumbnail;
+      'your-history.your-history': YourHistoryYourHistory;
     }
   }
 }

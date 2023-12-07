@@ -677,6 +677,41 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiAboutPageAboutPage extends Schema.SingleType {
+  collectionName: 'about_pages';
+  info: {
+    singularName: 'about-page';
+    pluralName: 'about-pages';
+    displayName: 'AboutPage';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    AboutHero: Attribute.Component<'about-hero.about-hero'> &
+      Attribute.Required;
+    Introduction: Attribute.Component<'introduction.introduction'> &
+      Attribute.Required;
+    YourHistory: Attribute.Component<'your-history.your-history'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::about-page.about-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::about-page.about-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiContentMediaContentMedia extends Schema.SingleType {
   collectionName: 'content_medias';
   info: {
@@ -802,6 +837,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::content-media.content-media': ApiContentMediaContentMedia;
       'api::image-gallery.image-gallery': ApiImageGalleryImageGallery;
       'api::site-footer.site-footer': ApiSiteFooterSiteFooter;

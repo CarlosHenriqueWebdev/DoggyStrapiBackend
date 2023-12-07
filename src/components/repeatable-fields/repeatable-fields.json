@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_repeatable_fields_repeatable_fields",
+  "info": {
+    "displayName": "RepeatableFields",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "blocks",
+      "required": true
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "ImageAlternativeTextForAccesibility": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

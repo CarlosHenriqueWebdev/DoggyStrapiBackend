@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_our_history_our_histories",
+  "info": {
+    "displayName": "OurHistory"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "blocks",
+      "required": true
+    }
+  }
+}

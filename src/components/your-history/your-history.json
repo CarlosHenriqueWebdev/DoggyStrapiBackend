@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_your_history_your_histories",
+  "info": {
+    "displayName": "YourHistory"
+  },
+  "options": {},
+  "attributes": {
+    "RepeatableFields": {
+      "displayName": "RepeatableFields",
+      "type": "component",
+      "repeatable": true,
+      "component": "repeatable-fields.repeatable-fields",
+      "required": true
+    }
+  }
+}
