@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_wokers_testimonials_wokers_testimonials",
+  "info": {
+    "displayName": "WokersTestimonials"
+  },
+  "options": {},
+  "attributes": {
+    "VideoFormat": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage-videos-hero-section.hero-section-video-formats",
+      "required": true
+    },
+    "BackgroundImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

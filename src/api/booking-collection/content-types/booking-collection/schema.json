@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "booking_collections",
+  "info": {
+    "singularName": "booking-collection",
+    "pluralName": "booking-collections",
+    "displayName": "BookingCollection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Location": {
+      "type": "string",
+      "required": true
+    },
+    "ReturningCustomer": {
+      "type": "string",
+      "required": true
+    },
+    "ReferralSource": {
+      "type": "string",
+      "required": true
+    },
+    "FirstName": {
+      "type": "string",
+      "required": true
+    },
+    "LastName": {
+      "type": "string",
+      "required": true
+    },
+    "Email": {
+      "type": "email",
+      "required": true
+    },
+    "PhoneNumber": {
+      "type": "string",
+      "required": true
+    },
+    "EmergencyContact": {
+      "displayName": "EmergencyContact",
+      "type": "component",
+      "repeatable": false,
+      "component": "emergency-contact.emergency-contact",
+      "required": true
+    },
+    "DogsInformation": {
+      "displayName": "DogsInformation",
+      "type": "component",
+      "repeatable": true,
+      "component": "dogs-information.dogs-information",
+      "required": true
+    }
+  }
+}

@@ -6,25 +6,23 @@
   },
   "options": {},
   "attributes": {
-    "FirstTextGroup": {
-      "displayName": "FirstTextGroup",
-      "type": "component",
-      "repeatable": false,
-      "component": "first-text-group.first-text-group",
-      "required": true
-    },
-    "SecondTextGroup": {
-      "displayName": "SecondTextGroup",
-      "type": "component",
-      "repeatable": false,
-      "component": "second-text-group.second-text-group",
-      "required": true
-    },
     "ThirdTextGroup": {
       "displayName": "ThirdTextGroup",
       "type": "component",
       "repeatable": false,
       "component": "third-text-group.third-text-group"
+    },
+    "FirstText": {
+      "type": "component",
+      "repeatable": false,
+      "component": "text-reusable-component.text-reusable-component",
+      "required": true
+    },
+    "SecondText": {
+      "type": "component",
+      "repeatable": false,
+      "component": "text-reusable-component.text-reusable-component",
+      "required": true
     }
   }
 }

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_your_team_your_teams",
+  "info": {
+    "displayName": "YourTeam"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "WorkerInformation": {
+      "displayName": "WorkerInformation",
+      "type": "component",
+      "repeatable": true,
+      "component": "worker-information.worker-information"
+    }
+  }
+}

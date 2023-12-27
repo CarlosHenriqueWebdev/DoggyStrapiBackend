@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_positions_hero_positions_heroes",
+  "info": {
+    "displayName": "PositionsHero"
+  },
+  "options": {},
+  "attributes": {
+    "BackgroundImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "BackgroundPosition": {
+      "type": "integer",
+      "required": true
+    },
+    "BackgroundOverlay": {
+      "type": "json",
+      "required": true
+    }
+  }
+}

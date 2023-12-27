@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_locations_list_locations_lists",
+  "info": {
+    "displayName": "LocationsList"
+  },
+  "options": {},
+  "attributes": {
+    "RepeatableFieldsList": {
+      "displayName": "RepeatableFieldsList",
+      "type": "component",
+      "repeatable": true,
+      "component": "repeatable-fields-list.repeatable-fields-list"
+    }
+  }
+}

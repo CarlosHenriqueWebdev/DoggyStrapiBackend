@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_important_fields_important_fields",
+  "info": {
+    "displayName": "ImportantFields"
+  },
+  "options": {},
+  "attributes": {
+    "BoldText": {
+      "type": "string",
+      "required": true
+    },
+    "SubText": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

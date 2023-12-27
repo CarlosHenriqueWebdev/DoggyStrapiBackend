@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_main_content_main_contents",
+  "info": {
+    "displayName": "MainContent"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

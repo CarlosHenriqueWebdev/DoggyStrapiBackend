@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_worker_information_worker_informations",
+  "info": {
+    "displayName": "WorkerInformation"
+  },
+  "options": {},
+  "attributes": {
+    "WorkerImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Role": {
+      "type": "string",
+      "required": true
+    },
+    "FacilityLocation": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

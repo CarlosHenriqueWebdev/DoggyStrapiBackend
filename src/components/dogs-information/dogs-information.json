@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_dogs_information_dogs_informations",
+  "info": {
+    "displayName": "DogsInformation"
+  },
+  "options": {},
+  "attributes": {
+    "DogName": {
+      "type": "string",
+      "required": true
+    },
+    "Breed": {
+      "type": "string",
+      "required": true
+    },
+    "Age": {
+      "type": "string",
+      "required": true
+    },
+    "AdditionalInformation": {
+      "type": "text",
+      "required": true
+    },
+    "SpreyedNeutered": {
+      "type": "string",
+      "required": true
+    },
+    "VaccinationStatus": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

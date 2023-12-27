@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_testimonials_repeatable_testimonials_repeatables",
+  "info": {
+    "displayName": "TestimonialsRepeatable",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "VideoMP4": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "videos"
+      ]
+    },
+    "ProfilePicture": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "TestimonialText": {
+      "type": "text",
+      "required": true
+    },
+    "VideoWEBM": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "videos"
+      ]
+    }
+  }
+}

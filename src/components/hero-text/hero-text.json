@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_hero_text_hero_texts",
+  "info": {
+    "displayName": "HeroText"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

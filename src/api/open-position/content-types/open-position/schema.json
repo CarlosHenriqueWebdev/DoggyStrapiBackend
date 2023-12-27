@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "open_positions",
+  "info": {
+    "singularName": "open-position",
+    "pluralName": "open-positions",
+    "displayName": "OpenPositions",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "JobTitle": {
+      "type": "string",
+      "required": true
+    },
+    "JobLocation": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "TitleAddonText": {
+      "type": "string",
+      "required": true,
+      "default": "Junte-se a nós!"
+    },
+    "ButtonText": {
+      "type": "string",
+      "required": true
+    },
+    "UrlToExternalJobPage": {
+      "type": "string",
+      "required": true,
+      "default": "https://br.indeed.com/?r=us"
+    },
+    "ShareOnSocialNetworkOptional": {
+      "type": "component",
+      "repeatable": true,
+      "component": "socials-repeatable.socials-repeatable",
+      "required": false
+    },
+    "ContentTextRepeatable": {
+      "type": "component",
+      "repeatable": true,
+      "component": "text-reusable-component.text-reusable-component",
+      "required": true
+    },
+    "EmploymentType": {
+      "type": "string",
+      "required": true,
+      "default": "Tempo Integral"
+    },
+    "Experience": {
+      "type": "string",
+      "default": "6 Meses",
+      "required": true
+    }
+  }
+}

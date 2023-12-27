@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services_collections",
+  "info": {
+    "singularName": "services-collection",
+    "pluralName": "services-collections",
+    "displayName": "ServicesCollection",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "blocks",
+      "required": true
+    },
+    "ImageSlideshow": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Benefits": {
+      "displayName": "Benefits",
+      "type": "component",
+      "repeatable": false,
+      "component": "benefits.benefits",
+      "required": true
+    },
+    "Pricing": {
+      "displayName": "Pricing",
+      "type": "component",
+      "repeatable": false,
+      "component": "pricing.pricing",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "BackgroundPosition": {
+      "type": "string",
+      "required": true,
+      "default": "center center"
+    },
+    "geocodeLocation": {
+      "type": "json",
+      "required": true
+    }
+  }
+}

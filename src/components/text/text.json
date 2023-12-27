@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_text_texts",
+  "info": {
+    "displayName": "Text",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "SubmissionDisclaimer": {
+      "type": "blocks",
+      "required": true
+    }
+  }
+}

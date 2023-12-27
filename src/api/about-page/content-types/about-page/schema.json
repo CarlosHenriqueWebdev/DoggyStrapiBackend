@@ -12,13 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "AboutHero": {
-      "displayName": "AboutHero",
-      "type": "component",
-      "repeatable": false,
-      "component": "about-hero.about-hero",
-      "required": true
-    },
     "Introduction": {
       "displayName": "Introduction",
       "type": "component",
@@ -31,6 +24,34 @@
       "type": "component",
       "repeatable": false,
       "component": "your-history.your-history"
+    },
+    "YourTeam": {
+      "displayName": "YourTeam",
+      "type": "component",
+      "repeatable": false,
+      "component": "your-team.your-team",
+      "required": true
+    },
+    "WhyUs": {
+      "displayName": "WhyUs",
+      "type": "component",
+      "repeatable": false,
+      "component": "why-us.why-us",
+      "required": true
+    },
+    "CallToAction": {
+      "displayName": "CallToAction",
+      "type": "component",
+      "repeatable": false,
+      "component": "call-to-action.call-to-action",
+      "required": true
+    },
+    "HeroBaseUtils": {
+      "displayName": "HeroBaseUtils",
+      "type": "component",
+      "repeatable": false,
+      "component": "hero-base-utils.hero-base-utils",
+      "required": true
     }
   }
 }

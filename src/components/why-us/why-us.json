@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_why_us_whyuses",
+  "info": {
+    "displayName": "WhyUs",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "RepeatableFields": {
+      "displayName": "ReasonsListItem",
+      "type": "component",
+      "repeatable": true,
+      "component": "reasons-list-item.reasons-list-item",
+      "required": true
+    }
+  }
+}

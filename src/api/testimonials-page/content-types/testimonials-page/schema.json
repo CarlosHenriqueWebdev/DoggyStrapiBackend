@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "testimonials_pages",
+  "info": {
+    "singularName": "testimonials-page",
+    "pluralName": "testimonials-pages",
+    "displayName": "TestimonialsPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "TestimonialsRepeatable": {
+      "displayName": "TestimonialsRepeatable",
+      "type": "component",
+      "repeatable": true,
+      "component": "testimonials-repeatable.testimonials-repeatable",
+      "required": true
+    },
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

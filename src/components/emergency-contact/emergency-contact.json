@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_emergency_contact_emergency_contacts",
+  "info": {
+    "displayName": "EmergencyContact"
+  },
+  "options": {},
+  "attributes": {
+    "EmergencyName": {
+      "type": "string",
+      "required": true
+    },
+    "EmergencyPhoneNumber": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

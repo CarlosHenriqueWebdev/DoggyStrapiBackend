@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_location_fields_location_contact_form_fields",
+  "info": {
+    "displayName": "LocationContactFormFields",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "LocationsRepeatable": {
+      "displayName": "LocationsRepeatable",
+      "type": "component",
+      "repeatable": true,
+      "component": "locations-repeatable.locations-repeatable"
+    },
+    "InquiriesRepeatable": {
+      "type": "component",
+      "repeatable": true,
+      "component": "inquiries-repeatable.inquiries-repeatable"
+    }
+  }
+}

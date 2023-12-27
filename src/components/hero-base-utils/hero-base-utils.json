@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_hero_base_utils_hero_base_utils",
+  "info": {
+    "displayName": "HeroBaseUtils",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "BackgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "BackgroundOverlay": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "max": 9
+    },
+    "HeroText": {
+      "displayName": "HeroText",
+      "type": "component",
+      "repeatable": false,
+      "component": "hero-text.hero-text",
+      "required": true
+    },
+    "BackgroundPosition": {
+      "type": "string",
+      "default": "center center",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_table_items_table_items",
+  "info": {
+    "displayName": "TableItems"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Price": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

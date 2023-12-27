@@ -50,13 +50,6 @@
       "component": "services-section.services-section",
       "required": true
     },
-    "BookNowCallToAction": {
-      "displayName": "BookNowCallToAction",
-      "type": "component",
-      "repeatable": false,
-      "component": "book-now-call-to-action.book-now-call-to-action",
-      "required": true
-    },
     "QuoteDivider": {
       "displayName": "QuoteDivider",
       "type": "component",
@@ -76,6 +69,12 @@
       "type": "component",
       "repeatable": false,
       "component": "join-us.join-us",
+      "required": true
+    },
+    "BookNow": {
+      "type": "component",
+      "repeatable": false,
+      "component": "text-reusable-component.text-reusable-component",
       "required": true
     }
   }

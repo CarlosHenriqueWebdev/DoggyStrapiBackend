@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_locations_repeatable_locations_repeatables",
+  "info": {
+    "displayName": "LocationsRepeatable"
+  },
+  "options": {},
+  "attributes": {
+    "LocationName": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

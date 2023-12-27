@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "services_pages",
+  "info": {
+    "singularName": "services-page",
+    "pluralName": "services-pages",
+    "displayName": "ServicesPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HeroBaseUtils": {
+      "type": "component",
+      "repeatable": false,
+      "component": "hero-base-utils.hero-base-utils",
+      "required": true
+    },
+    "Introduction": {
+      "type": "component",
+      "repeatable": false,
+      "component": "introduction.introduction",
+      "required": true
+    }
+  }
+}

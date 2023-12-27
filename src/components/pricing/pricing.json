@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_pricing_pricings",
+  "info": {
+    "displayName": "Pricing"
+  },
+  "options": {},
+  "attributes": {
+    "TableItems": {
+      "displayName": "TableItems",
+      "type": "component",
+      "repeatable": true,
+      "component": "table-items.table-items"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_inquiries_repeatable_inquiries_repeatables",
+  "info": {
+    "displayName": "InquiriesRepeatable"
+  },
+  "options": {},
+  "attributes": {
+    "InquiryName": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

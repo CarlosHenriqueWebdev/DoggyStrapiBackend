@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_repeatable_fields_list_repeatable_fields_lists",
+  "info": {
+    "displayName": "RepeatableFieldsList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Referral": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
