@@ -23,10 +23,6 @@
     "FeatureDescription": {
       "type": "text",
       "required": true
-    },
-    "ImageAlternativeTextForAccesibility": {
-      "type": "string",
-      "required": true
     }
   }
 }

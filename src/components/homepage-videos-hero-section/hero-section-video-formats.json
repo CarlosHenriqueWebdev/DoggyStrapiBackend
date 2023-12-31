@@ -7,23 +7,9 @@
   },
   "options": {},
   "attributes": {
-    "MP4VideoForTheHeroSection": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": ["videos"]
-    },
-    "WebmVideoForTheHeroSection": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": ["videos"]
-    },
-    "VideoAttributionIfAny": {
-      "type": "string"
-    },
-    "VideoSourceLinkIfAny": {
-      "type": "string"
+    "YoutubeVideoId": {
+      "type": "string",
+      "required": true
     }
   }
 }

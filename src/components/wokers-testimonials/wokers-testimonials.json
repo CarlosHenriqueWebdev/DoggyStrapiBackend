@@ -1,22 +1,26 @@
 {
   "collectionName": "components_wokers_testimonials_wokers_testimonials",
   "info": {
-    "displayName": "WokersTestimonials"
+    "displayName": "WokersTestimonials",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "VideoFormat": {
-      "type": "component",
-      "repeatable": false,
-      "component": "homepage-videos-hero-section.hero-section-video-formats",
-      "required": true
-    },
     "BackgroundImage": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "BackgroundPosition": {
+      "type": "string",
+      "required": true,
+      "default": "center center"
+    },
+    "YoutubeVideoID": {
+      "type": "string",
       "required": true
     }
   }

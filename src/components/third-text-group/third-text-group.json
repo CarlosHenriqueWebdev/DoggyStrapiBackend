@@ -21,16 +21,6 @@
     "Description": {
       "type": "blocks",
       "required": true
-    },
-    "ImageAlternativeTextForAccesibility": {
-      "type": "string",
-      "required": true
-    },
-    "AttributionIfAny": {
-      "type": "string"
-    },
-    "SourceLinkIfAny": {
-      "type": "string"
     }
   }
 }

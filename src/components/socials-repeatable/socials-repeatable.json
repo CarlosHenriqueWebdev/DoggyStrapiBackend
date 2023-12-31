@@ -1,17 +1,18 @@
 {
   "collectionName": "components_socials_repeatable_socials_repeatables",
   "info": {
-    "displayName": "SocialsRepeatable"
+    "displayName": "SocialsRepeatable",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "Icon": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "Link": {
       "type": "string",

@@ -21,16 +21,6 @@
       "allowedTypes": [
         "images"
       ]
-    },
-    "ImageAttributionIfAny": {
-      "type": "string"
-    },
-    "ImageSourceIfAny": {
-      "type": "string"
-    },
-    "ImageAlternativeTextForAccesibility": {
-      "type": "string",
-      "required": true
     }
   }
 }

@@ -48,7 +48,6 @@ export interface DaycareFeaturesFeaturesRepetable extends Schema.Component {
       }>;
     FeatureIcon: Attribute.Media & Attribute.Required;
     FeatureDescription: Attribute.Text & Attribute.Required;
-    ImageAlternativeTextForAccesibility: Attribute.String & Attribute.Required;
   };
 }
 
@@ -191,7 +190,6 @@ export interface HomeTestimonialsHomeTestimonials extends Schema.Component {
     Title: Attribute.String & Attribute.Required;
     Description: Attribute.Blocks & Attribute.Required;
     Image: Attribute.Media & Attribute.Required;
-    ImageAlternativeTextForAccesibility: Attribute.String;
     GlassOverlayTransparency: Attribute.Integer & Attribute.Required;
   };
 }
@@ -205,10 +203,7 @@ export interface HomepageVideosHeroSectionHeroSectionVideoFormats
     description: '';
   };
   attributes: {
-    MP4VideoForTheHeroSection: Attribute.Media & Attribute.Required;
-    WebmVideoForTheHeroSection: Attribute.Media & Attribute.Required;
-    VideoAttributionIfAny: Attribute.String;
-    VideoSourceLinkIfAny: Attribute.String;
+    YoutubeVideoId: Attribute.String & Attribute.Required;
   };
 }
 
@@ -477,7 +472,6 @@ export interface RepeatableFieldsRepeatableFields extends Schema.Component {
     Title: Attribute.String & Attribute.Required;
     Description: Attribute.Blocks & Attribute.Required;
     Image: Attribute.Media & Attribute.Required;
-    ImageAlternativeTextForAccesibility: Attribute.String & Attribute.Required;
   };
 }
 
@@ -516,9 +510,6 @@ export interface ServicesServices extends Schema.Component {
     Title: Attribute.String & Attribute.Required;
     Description: Attribute.Text & Attribute.Required;
     Image: Attribute.Media & Attribute.Required;
-    ImageAttributionIfAny: Attribute.String;
-    ImageSourceIfAny: Attribute.String;
-    ImageAlternativeTextForAccesibility: Attribute.String & Attribute.Required;
   };
 }
 
@@ -526,6 +517,7 @@ export interface SocialsRepeatableSocialsRepeatable extends Schema.Component {
   collectionName: 'components_socials_repeatable_socials_repeatables';
   info: {
     displayName: 'SocialsRepeatable';
+    description: '';
   };
   attributes: {
     Icon: Attribute.Media & Attribute.Required;
@@ -568,11 +560,10 @@ export interface TestimonialsRepeatableTestimonialsRepeatable
     description: '';
   };
   attributes: {
-    VideoMP4: Attribute.Media & Attribute.Required;
     ProfilePicture: Attribute.Media & Attribute.Required;
     Name: Attribute.String & Attribute.Required;
     TestimonialText: Attribute.Text & Attribute.Required;
-    VideoWEBM: Attribute.Media & Attribute.Required;
+    YoutubeVideoID: Attribute.String & Attribute.Required;
   };
 }
 
@@ -610,9 +601,6 @@ export interface ThirdTextGroupThirdTextGroup extends Schema.Component {
     IllustrationImage: Attribute.Media & Attribute.Required;
     Title: Attribute.String & Attribute.Required;
     Description: Attribute.Blocks & Attribute.Required;
-    ImageAlternativeTextForAccesibility: Attribute.String & Attribute.Required;
-    AttributionIfAny: Attribute.String;
-    SourceLinkIfAny: Attribute.String;
   };
 }
 
@@ -648,11 +636,14 @@ export interface WokersTestimonialsWokersTestimonials extends Schema.Component {
   collectionName: 'components_wokers_testimonials_wokers_testimonials';
   info: {
     displayName: 'WokersTestimonials';
+    description: '';
   };
   attributes: {
-    VideoFormat: Attribute.Component<'homepage-videos-hero-section.hero-section-video-formats'> &
-      Attribute.Required;
     BackgroundImage: Attribute.Media & Attribute.Required;
+    BackgroundPosition: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'center center'>;
+    YoutubeVideoID: Attribute.String & Attribute.Required;
   };
 }
 

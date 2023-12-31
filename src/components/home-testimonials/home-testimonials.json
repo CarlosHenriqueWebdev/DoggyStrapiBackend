@@ -22,9 +22,6 @@
         "images"
       ]
     },
-    "ImageAlternativeTextForAccesibility": {
-      "type": "string"
-    },
     "GlassOverlayTransparency": {
       "type": "integer",
       "required": true

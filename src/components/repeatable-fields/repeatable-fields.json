@@ -21,10 +21,6 @@
       "allowedTypes": [
         "images"
       ]
-    },
-    "ImageAlternativeTextForAccesibility": {
-      "type": "string",
-      "required": true
     }
   }
 }
