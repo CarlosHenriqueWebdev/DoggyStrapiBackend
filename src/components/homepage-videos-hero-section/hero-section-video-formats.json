@@ -7,8 +7,20 @@
   },
   "options": {},
   "attributes": {
-    "YoutubeVideoId": {
-      "type": "string",
+    "MP4VideoForTheHeroSection": {
+      "allowedTypes": [
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "WebmVideoForTheHeroSection": {
+      "allowedTypes": [
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false,
       "required": true
     }
   }

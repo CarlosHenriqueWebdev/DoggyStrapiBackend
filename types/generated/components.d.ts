@@ -203,7 +203,8 @@ export interface HomepageVideosHeroSectionHeroSectionVideoFormats
     description: '';
   };
   attributes: {
-    YoutubeVideoId: Attribute.String & Attribute.Required;
+    MP4VideoForTheHeroSection: Attribute.Media & Attribute.Required;
+    WebmVideoForTheHeroSection: Attribute.Media & Attribute.Required;
   };
 }
 
