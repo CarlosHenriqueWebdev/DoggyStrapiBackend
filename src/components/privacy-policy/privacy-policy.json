@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_privacy_policy_privacy_policies",
+  "info": {
+    "displayName": "PrivacyPolicy"
+  },
+  "options": {},
+  "attributes": {
+    "TitleAndDescription": {
+      "type": "component",
+      "repeatable": true,
+      "component": "text-reusable-component.text-reusable-component",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "terms_and_privacy_policies",
+  "info": {
+    "singularName": "terms-and-privacy-policy",
+    "pluralName": "terms-and-privacy-policies",
+    "displayName": "TermsAndPrivacyPolicy",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "TermsAndConditions": {
+      "type": "component",
+      "repeatable": false,
+      "component": "terms-and-conditions.terms-and-conditions",
+      "required": true
+    },
+    "PrivacyPolicy": {
+      "displayName": "PrivacyPolicy",
+      "type": "component",
+      "repeatable": false,
+      "component": "privacy-policy.privacy-policy",
+      "required": true
+    }
+  }
+}

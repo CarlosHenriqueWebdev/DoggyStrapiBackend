@@ -55,12 +55,17 @@ export interface DaycareFeaturesHomepageSiteFeatures extends Schema.Component {
   collectionName: 'components_daycare_features_homepage_site_features';
   info: {
     displayName: 'HomepageSiteFeatures';
+    description: '';
   };
   attributes: {
     FeaturesRepetable: Attribute.Component<
       'daycare-features.features-repetable',
       true
-    >;
+    > &
+      Attribute.SetMinMax<{
+        min: 3;
+        max: 3;
+      }>;
   };
 }
 
@@ -359,7 +364,11 @@ export interface NumberCounterCategoryNumberCounterComponent
     NumberCounterRepetable: Attribute.Component<
       'number-counter-repeatable-category.number-counter-repetable-group',
       true
-    >;
+    > &
+      Attribute.SetMinMax<{
+        min: 3;
+        max: 3;
+      }>;
     CounterBackgroundImage: Attribute.Media & Attribute.Required;
     GlassOverlayTransparency: Attribute.Integer & Attribute.Required;
     ImageSize: Attribute.Enumeration<['small', 'medium', 'large']> &
@@ -412,6 +421,20 @@ export interface PricingPricing extends Schema.Component {
   };
   attributes: {
     TableItems: Attribute.Component<'table-items.table-items', true>;
+  };
+}
+
+export interface PrivacyPolicyPrivacyPolicy extends Schema.Component {
+  collectionName: 'components_privacy_policy_privacy_policies';
+  info: {
+    displayName: 'PrivacyPolicy';
+  };
+  attributes: {
+    TitleAndDescription: Attribute.Component<
+      'text-reusable-component.text-reusable-component',
+      true
+    > &
+      Attribute.Required;
   };
 }
 
@@ -536,6 +559,20 @@ export interface TableItemsTableItems extends Schema.Component {
     Name: Attribute.String & Attribute.Required;
     Price: Attribute.String & Attribute.Required;
     Description: Attribute.Text & Attribute.Required;
+  };
+}
+
+export interface TermsAndConditionsTermsAndConditions extends Schema.Component {
+  collectionName: 'components_terms_and_conditions_terms_and_conditions';
+  info: {
+    displayName: 'TermsAndConditions';
+  };
+  attributes: {
+    TitleAndDescription: Attribute.Component<
+      'text-reusable-component.text-reusable-component',
+      true
+    > &
+      Attribute.Required;
   };
 }
 
@@ -723,6 +760,7 @@ declare module '@strapi/types' {
       'our-history.our-history': OurHistoryOurHistory;
       'positions-hero.positions-hero': PositionsHeroPositionsHero;
       'pricing.pricing': PricingPricing;
+      'privacy-policy.privacy-policy': PrivacyPolicyPrivacyPolicy;
       'questions-and-answers.questions-and-answers': QuestionsAndAnswersQuestionsAndAnswers;
       'quote-divider.quote-divider': QuoteDividerQuoteDivider;
       'reasons-list-item.reasons-list-item': ReasonsListItemReasonsListItem;
@@ -733,6 +771,7 @@ declare module '@strapi/types' {
       'services.services': ServicesServices;
       'socials-repeatable.socials-repeatable': SocialsRepeatableSocialsRepeatable;
       'table-items.table-items': TableItemsTableItems;
+      'terms-and-conditions.terms-and-conditions': TermsAndConditionsTermsAndConditions;
       'testimonial-video.testimonial-video': TestimonialVideoTestimonialVideo;
       'testimonials-repeatable.testimonials-repeatable': TestimonialsRepeatableTestimonialsRepeatable;
       'text-reusable-component.text-reusable-component': TextReusableComponentTextReusableComponent;

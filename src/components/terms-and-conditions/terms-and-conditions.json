@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_terms_and_conditions_terms_and_conditions",
+  "info": {
+    "displayName": "TermsAndConditions"
+  },
+  "options": {},
+  "attributes": {
+    "TitleAndDescription": {
+      "type": "component",
+      "repeatable": true,
+      "component": "text-reusable-component.text-reusable-component",
+      "required": true
+    }
+  }
+}

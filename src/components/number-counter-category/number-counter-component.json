@@ -11,7 +11,9 @@
       "displayName": "NumberCounterRepetableGroup",
       "type": "component",
       "repeatable": true,
-      "component": "number-counter-repeatable-category.number-counter-repetable-group"
+      "component": "number-counter-repeatable-category.number-counter-repetable-group",
+      "max": 3,
+      "min": 3
     },
     "CounterBackgroundImage": {
       "type": "media",

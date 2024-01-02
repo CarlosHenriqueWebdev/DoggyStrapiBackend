@@ -1088,6 +1088,41 @@ export interface ApiSiteFooterSiteFooter extends Schema.SingleType {
   };
 }
 
+export interface ApiTermsAndPrivacyPolicyTermsAndPrivacyPolicy
+  extends Schema.SingleType {
+  collectionName: 'terms_and_privacy_policies';
+  info: {
+    singularName: 'terms-and-privacy-policy';
+    pluralName: 'terms-and-privacy-policies';
+    displayName: 'TermsAndPrivacyPolicy';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    TermsAndConditions: Attribute.Component<'terms-and-conditions.terms-and-conditions'> &
+      Attribute.Required;
+    PrivacyPolicy: Attribute.Component<'privacy-policy.privacy-policy'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::terms-and-privacy-policy.terms-and-privacy-policy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::terms-and-privacy-policy.terms-and-privacy-policy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTestimonialsPageTestimonialsPage extends Schema.SingleType {
   collectionName: 'testimonials_pages';
   info: {
@@ -1151,6 +1186,7 @@ declare module '@strapi/types' {
       'api::services-collection.services-collection': ApiServicesCollectionServicesCollection;
       'api::services-page.services-page': ApiServicesPageServicesPage;
       'api::site-footer.site-footer': ApiSiteFooterSiteFooter;
+      'api::terms-and-privacy-policy.terms-and-privacy-policy': ApiTermsAndPrivacyPolicyTermsAndPrivacyPolicy;
       'api::testimonials-page.testimonials-page': ApiTestimonialsPageTestimonialsPage;
     }
   }
