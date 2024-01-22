@@ -15,7 +15,7 @@ module.exports = {
         host: "smtp-relay.brevo.com",
         port: 587,
         auth: {
-          user: "ninjaman6u@gmail.com",
+          user: "carloshenrique.webdev@gmail.com",
           pass: "2UAD7BnRhbN4Vazq",
         },
       });
@@ -53,7 +53,7 @@ module.exports = {
         host: "smtp-relay.brevo.com",
         port: 587,
         auth: {
-          user: "ninjaman6u@gmail.com",
+          user: "carloshenrique.webdev@gmail.com",
           pass: "2UAD7BnRhbN4Vazq",
         },
       });
