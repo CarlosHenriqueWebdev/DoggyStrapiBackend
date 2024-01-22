@@ -4,9 +4,12 @@ module.exports = {
   async afterCreate(model) {
     const { FirstName, LastName, Email, Message, Location, InquiryType } =
       model.params.data;
+
+      console.log(model.params.data)
       
     // Check if the model object has the expected properties
     if (FirstName && LastName && Email && Message && Location && InquiryType) {
+      console.log("check is workig!")
       // Nodemailer configuration for the first email
       const transporter = nodemailer.createTransport({
         host: "smtp-relay.brevo.com",
