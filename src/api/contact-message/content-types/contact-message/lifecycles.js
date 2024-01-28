@@ -5,24 +5,23 @@ module.exports = {
     const { FirstName, LastName, Email, Message, Location, InquiryType } =
       model.params.data;
 
-      console.log(model.params.data)
-      
     // Check if the model object has the expected properties
     if (FirstName && LastName && Email && Message && Location && InquiryType) {
-      console.log("check is workig!")
-      // Nodemailer configuration for the first email
+      // Add isFormSucessful to the model.result
+      model.result.isFormSuccessful = false;
+
       const transporter = nodemailer.createTransport({
         host: "smtp-relay.brevo.com",
         port: 587,
         auth: {
           user: "carloshenrique.webdev@gmail.com",
-          pass: "2UAD7BnRhbN4Vazq",
+          pass: "R07gfHNE5waFjWqy",
         },
       });
 
       // Email content for the first email
       const mailOptions = {
-        from: "carlahenriques@mail.com",
+        from: "carloshenrique.webdev@gmail.com",
         to: Email,
         subject: "Assunto: Seu Contato foi Recebido com Sucesso!",
         text: `Olá ${FirstName}, agradecemos por entrar em contato conosco. Recebemos sua mensagem e entraremos em contato em breve.
@@ -44,6 +43,9 @@ module.exports = {
       try {
         await transporter.sendMail(mailOptions);
         console.log(`Email notification sent to ${Email}`);
+
+        // Set the isFormSuccessful flag
+        model.result.isFormSuccessful = true;
       } catch (error) {
         console.error("Error sending email notification:", error);
       }
@@ -54,14 +56,14 @@ module.exports = {
         port: 587,
         auth: {
           user: "carloshenrique.webdev@gmail.com",
-          pass: "2UAD7BnRhbN4Vazq",
+          pass: "R07gfHNE5waFjWqy",
         },
       });
 
       // Email content for the second email
       const mailOptions02 = {
-        from: "carlahenriques@mail.com",
-        to: "carlahenriques@mail.com",
+        from: "carloshenrique.webdev@gmail.com",
+        to: "carloshenrique.webdev@gmail.com",
         subject: `${InquiryType} - ${FirstName} enviou uma Mensagem.`,
         text: `Um novo contato foi recebido através do formulário. Abaixo estão os detalhes:
 
@@ -84,6 +86,7 @@ module.exports = {
       try {
         await transporter2.sendMail(mailOptions02);
         console.log("Second email notification sent");
+        model.result.isFormSuccessful = true;
       } catch (error) {
         console.error("Error sending second email notification:", error);
       }

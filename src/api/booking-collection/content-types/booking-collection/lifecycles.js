@@ -105,19 +105,21 @@ module.exports = {
       EmergencyPhoneNumber &&
       dogsInfo
     ) {
+      model.result.isFormSuccessful = false;
+
       // Nodemailer configuration for the first email
       const transporter = nodemailer.createTransport({
         host: "smtp-relay.brevo.com",
         port: 587,
         auth: {
-          user: "ninjaman6u@gmail.com",
-          pass: "2UAD7BnRhbN4Vazq",
+          user: "carloshenrique.webdev@gmail.com",
+          pass: "R07gfHNE5waFjWqy",
         },
       });
 
       // Email content for the first email
       const mailOptions = {
-        from: "carlahenriques@mail.com",
+        from: "carloshenrique.webdev@gmail.com",
         to: Email,
         subject: "Recebemos sua Reserva na Doggy Daycare!",
         text: `${userText}`,
@@ -127,6 +129,7 @@ module.exports = {
       try {
         await transporter.sendMail(mailOptions);
         console.log(`Email notification sent to ${Email}`);
+        model.result.isFormSuccessful = true;
       } catch (error) {
         console.error("Error sending email notification:", error);
       }
@@ -136,15 +139,15 @@ module.exports = {
         host: "smtp-relay.brevo.com",
         port: 587,
         auth: {
-          user: "ninjaman6u@gmail.com",
-          pass: "2UAD7BnRhbN4Vazq",
+          user: "carloshenrique.webdev@gmail.com",
+          pass: "R07gfHNE5waFjWqy",
         },
       });
 
       // Email content for the second email
       const mailOptions02 = {
-        from: "carlahenriques@mail.com",
-        to: "carlahenriques@mail.com",
+        from: "carloshenrique.webdev@gmail.com",
+        to: "carloshenrique.webdev@gmail.com",
         subject: `${Location} - Nova Reserva Recebida - ${FirstName} ${LastName}`,
         text: `${adminNotificationText}`,
       };
@@ -153,6 +156,7 @@ module.exports = {
       try {
         await transporter2.sendMail(mailOptions02);
         console.log("Second email notification sent");
+        model.result.isFormSuccessful = true;
       } catch (error) {
         console.error("Error sending second email notification:", error);
       }
