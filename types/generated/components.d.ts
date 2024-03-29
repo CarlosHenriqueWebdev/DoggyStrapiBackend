@@ -62,10 +62,13 @@ export interface DaycareFeaturesHomepageSiteFeatures extends Schema.Component {
       'daycare-features.features-repetable',
       true
     > &
-      Attribute.SetMinMax<{
-        min: 3;
-        max: 3;
-      }>;
+      Attribute.SetMinMax<
+        {
+          min: 3;
+          max: 3;
+        },
+        number
+      >;
   };
 }
 
@@ -152,10 +155,13 @@ export interface HeroBaseUtilsHeroBaseUtils extends Schema.Component {
     BackgroundImage: Attribute.Media & Attribute.Required;
     BackgroundOverlay: Attribute.Integer &
       Attribute.Required &
-      Attribute.SetMinMax<{
-        min: 0;
-        max: 9;
-      }>;
+      Attribute.SetMinMax<
+        {
+          min: 0;
+          max: 9;
+        },
+        number
+      >;
     HeroText: Attribute.Component<'hero-text.hero-text'> & Attribute.Required;
     BackgroundPosition: Attribute.String &
       Attribute.Required &
@@ -365,10 +371,13 @@ export interface NumberCounterCategoryNumberCounterComponent
       'number-counter-repeatable-category.number-counter-repetable-group',
       true
     > &
-      Attribute.SetMinMax<{
-        min: 3;
-        max: 3;
-      }>;
+      Attribute.SetMinMax<
+        {
+          min: 3;
+          max: 3;
+        },
+        number
+      >;
     CounterBackgroundImage: Attribute.Media & Attribute.Required;
     GlassOverlayTransparency: Attribute.Integer & Attribute.Required;
     ImageSize: Attribute.Enumeration<['small', 'medium', 'large']> &
