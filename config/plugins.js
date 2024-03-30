@@ -3,16 +3,16 @@ module.exports = ({ env }) => ({
     config: {
       provider: "nodemailer",
       providerOptions: {
-        host: "smtp-relay.brevo.com",
-        port: 587,
+        host: env("SMTP_HOST"),
+        port: env("SMTP_PORT"),
         auth: {
-          user: "carloshenrique.webdev@gmail.com",
-          pass: "R07gfHNE5waFjWqy",
+          user: env("SMTP_USER"),
+          pass: env("SMTP_PASS"),
         },
       },
       settings: {
-        defaultFrom: "carloshenrique.webdev@gmail.com",
-        defaultReplyTo: "carloshenrique.webdev@gmail.com",
+        defaultFrom: env("SMTP_DEFAULT_FROM"),
+        defaultReplyTo: env("SMTP_DEFAULT_REPLY_TO"),
       },
     },
   },
