@@ -119,7 +119,7 @@ module.exports = {
 
       // Email content for the first email
       const mailOptions = {
-        from: "carloshenrique.webdev@gmail.com",
+        from: process.env.SMTP_USER,
         to: Email,
         subject: "Recebemos sua Reserva na Doggy Daycare!",
         text: `${userText}`,
@@ -146,8 +146,8 @@ module.exports = {
 
       // Email content for the second email
       const mailOptions02 = {
-        from: "carloshenrique.webdev@gmail.com",
-        to: "carloshenrique.webdev@gmail.com",
+        from: process.env.SMTP_USER,
+        to: process.env.SMTP_USER,
         subject: `${Location} - Nova Reserva Recebida - ${FirstName} ${LastName}`,
         text: `${adminNotificationText}`,
       };
