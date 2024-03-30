@@ -112,8 +112,8 @@ module.exports = {
         host: "smtp-relay.brevo.com",
         port: 587,
         auth: {
-          user: "carloshenrique.webdev@gmail.com",
-          pass: "R07gfHNE5waFjWqy",
+          user: process.env.SMTP_USER,
+          pass: process.env.SMTP_PASS,
         },
       });
 
@@ -139,8 +139,8 @@ module.exports = {
         host: "smtp-relay.brevo.com",
         port: 587,
         auth: {
-          user: "carloshenrique.webdev@gmail.com",
-          pass: "R07gfHNE5waFjWqy",
+          user: process.env.SMTP_USER,
+          pass: process.env.SMTP_PASS,
         },
       });
 
