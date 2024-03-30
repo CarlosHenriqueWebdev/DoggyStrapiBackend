@@ -352,9 +352,8 @@ export interface MediaCollectionsHomepageHomepageMediaContent
     description: '';
   };
   attributes: {
-    HeroVideosFormats: Attribute.Component<'homepage-videos-hero-section.hero-section-video-formats'>;
-    HeroTextVideo: Attribute.Component<'hero-text-video.hero-text-video'> &
-      Attribute.Required;
+    HeroImage: Attribute.Component<'positions-hero.positions-hero'>;
+    HeroText: Attribute.Component<'introduction.introduction'>;
   };
 }
 

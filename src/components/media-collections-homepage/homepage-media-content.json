@@ -7,18 +7,15 @@
   },
   "options": {},
   "attributes": {
-    "HeroVideosFormats": {
-      "displayName": "HeroSectionVideoFormatAndAttributions",
+    "HeroImage": {
       "type": "component",
       "repeatable": false,
-      "component": "homepage-videos-hero-section.hero-section-video-formats"
+      "component": "positions-hero.positions-hero"
     },
-    "HeroTextVideo": {
-      "displayName": "HeroTextVideo",
+    "HeroText": {
       "type": "component",
       "repeatable": false,
-      "component": "hero-text-video.hero-text-video",
-      "required": true
+      "component": "introduction.introduction"
     }
   }
 }

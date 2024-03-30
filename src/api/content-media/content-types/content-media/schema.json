@@ -12,12 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "HeroSection": {
-      "displayName": "HomepageMediaContent",
-      "type": "component",
-      "repeatable": false,
-      "component": "media-collections-homepage.homepage-media-content"
-    },
     "SiteFeatures": {
       "displayName": "HomepageSiteFeatures",
       "type": "component",
@@ -76,6 +70,11 @@
       "repeatable": false,
       "component": "text-reusable-component.text-reusable-component",
       "required": true
+    },
+    "HeroBaseUtils": {
+      "type": "component",
+      "repeatable": false,
+      "component": "hero-base-utils.hero-base-utils"
     }
   }
 }

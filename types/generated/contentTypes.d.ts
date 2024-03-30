@@ -919,7 +919,6 @@ export interface ApiContentMediaContentMedia extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    HeroSection: Attribute.Component<'media-collections-homepage.homepage-media-content'>;
     SiteFeatures: Attribute.Component<'daycare-features.homepage-site-features'>;
     NumberCounter: Attribute.Component<'number-counter-category.number-counter-component'>;
     LongTextDescription: Attribute.Component<'long-text-homepage.long-text-homepage'>;
@@ -934,6 +933,7 @@ export interface ApiContentMediaContentMedia extends Schema.SingleType {
     JoinUs: Attribute.Component<'join-us.join-us'> & Attribute.Required;
     BookNow: Attribute.Component<'text-reusable-component.text-reusable-component'> &
       Attribute.Required;
+    HeroBaseUtils: Attribute.Component<'hero-base-utils.hero-base-utils'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
