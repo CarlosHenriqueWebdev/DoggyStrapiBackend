@@ -109,17 +109,17 @@ module.exports = {
 
       // Nodemailer configuration for the first email
       const transporter = nodemailer.createTransport({
-        host: "smtp-relay.brevo.com",
+        host: "smtp.sendgrid.net",
         port: 587,
         auth: {
           user: process.env.SMTP_USER,
-          pass: process.env.SMTP_PASS,
+          pass: process.env.SMTP_API_KEY,
         },
       });
 
       // Email content for the first email
       const mailOptions = {
-        from: process.env.SMTP_USER,
+        from: process.env.SMTP_EMAIL,
         to: Email,
         subject: "Recebemos sua Reserva na Doggy Daycare!",
         text: `${userText}`,
@@ -136,18 +136,18 @@ module.exports = {
 
       // Nodemailer configuration for the second email
       const transporter2 = nodemailer.createTransport({
-        host: "smtp-relay.brevo.com",
+        host: "smtp.sendgrid.net",
         port: 587,
         auth: {
           user: process.env.SMTP_USER,
-          pass: process.env.SMTP_PASS,
+          pass: process.env.SMTP_API_KEY,
         },
       });
 
       // Email content for the second email
       const mailOptions02 = {
-        from: process.env.SMTP_USER,
-        to: process.env.SMTP_USER,
+        from: process.env.SMTP_EMAIL,
+        to: process.env.SMTP_EMAIL,
         subject: `${Location} - Nova Reserva Recebida - ${FirstName} ${LastName}`,
         text: `${adminNotificationText}`,
       };

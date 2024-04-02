@@ -1,19 +1,17 @@
-module.exports = ({ env }) => ({
+module.exports = () => ({
   email: {
-    config: {
-      provider: "nodemailer",
-      providerOptions: {
-        host: env("SMTP_HOST"),
-        port: env("SMTP_PORT"),
-        auth: {
-          user: env("SMTP_USER"),
-          pass: env("SMTP_PASS"),
-        },
+    provider: "nodemailer",
+    providerOptions: {
+      host: "smtp.sendgrid.net",
+      port: 587,
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_API_KEY,
       },
-      settings: {
-        defaultFrom: env("SMTP_DEFAULT_FROM"),
-        defaultReplyTo: env("SMTP_DEFAULT_REPLY_TO"),
-      },
+    },
+    settings: {
+      defaultFrom: process.env.SMTP_EMAIL,
+      defaultReplyTo: process.env.SMTP_EMAIL,
     },
   },
 });

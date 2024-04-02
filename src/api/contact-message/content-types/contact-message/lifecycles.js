@@ -11,17 +11,17 @@ module.exports = {
       model.result.isFormSuccessful = false;
 
       const transporter = nodemailer.createTransport({
-        host: "smtp-relay.brevo.com",
+        host: "smtp.sendgrid.net",
         port: 587,
         auth: {
-          user: "carloshenrique.webdev@gmail.com",
-          pass: "R07gfHNE5waFjWqy",
+          user: process.env.SMTP_USER,
+          pass: process.env.SMTP_API_KEY,
         },
       });
 
       // Email content for the first email
       const mailOptions = {
-        from: "carloshenrique.webdev@gmail.com",
+        from: process.env.SMTP_EMAIL,
         to: Email,
         subject: "Assunto: Seu Contato foi Recebido com Sucesso!",
         text: `Olá ${FirstName}, agradecemos por entrar em contato conosco. Recebemos sua mensagem e entraremos em contato em breve.
@@ -52,18 +52,18 @@ module.exports = {
 
       // Nodemailer configuration for the second email
       const transporter2 = nodemailer.createTransport({
-        host: "smtp-relay.brevo.com",
+        host: "smtp.sendgrid.net",
         port: 587,
         auth: {
-          user: "carloshenrique.webdev@gmail.com",
-          pass: "R07gfHNE5waFjWqy",
+          user: process.env.SMTP_USER,
+          pass: process.env.SMTP_API_KEY,
         },
       });
 
       // Email content for the second email
       const mailOptions02 = {
-        from: "carloshenrique.webdev@gmail.com",
-        to: "carloshenrique.webdev@gmail.com",
+        from: process.env.SMTP_EMAIL,
+        to: process.env.SMTP_EMAIL,
         subject: `${InquiryType} - ${FirstName} enviou uma Mensagem.`,
         text: `Um novo contato foi recebido através do formulário. Abaixo estão os detalhes:
 
